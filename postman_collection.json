@@ -1,0 +1,3098 @@
+{
+	"info": {
+		"_postman_id": "f49b4e36-1631-4a60-8103-b0c9b8b68c4d",
+		"name": "portfolio-hicksa2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23944784"
+	},
+	"item": [
+		{
+			"name": "get all users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/users"
+			},
+			"response": []
+		},
+		{
+			"name": "add user1 console01 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set boat id environment variable from response",
+							"pm.environment.set(\"console01_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PlayStation 5\",\n    \"memory\": \"16 GB\",\n    \"storage\": \"1 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "add user1 console02 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set boat id environment variable from response",
+							"pm.environment.set(\"console02_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Nintendo Switch\",\n    \"memory\": \"8 GB\",\n    \"storage\": \"500 GB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "add user1 console03 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set boat id environment variable from response",
+							"pm.environment.set(\"console03_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Xbox One\",\n    \"memory\": \"32 GB\",\n    \"storage\": \"2 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "add user1 console04 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set boat id environment variable from response",
+							"pm.environment.set(\"console04_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PC\",\n    \"memory\": \"64 GB\",\n    \"storage\": \"4 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "add user1 console05 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set boat id environment variable from response",
+							"pm.environment.set(\"console05_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Nintendo DS\",\n    \"memory\": \"4 GB\",\n    \"storage\": \"64 GB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "add user1 console06 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set boat id environment variable from response",
+							"pm.environment.set(\"console06_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PSP\",\n    \"memory\": \"8 GB\",\n    \"storage\": \"128 GB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "add user1 console with html 406",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"406 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(406);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PSP\",\n    \"memory\": \"8 GB\",\n    \"storage\": \"128 GB\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "get all user1 consoles 200 (page 1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.environment.set(\"next_console_page\", pm.response.json()[\"next\"]);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "get all user1 consoles 200 (page 2)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{next_console_page}}"
+			},
+			"response": []
+		},
+		{
+			"name": "get all user1 consoles with html 406",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 406\", function () {",
+							"    pm.response.to.have.status(406);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "add user2 console07 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set boat id environment variable from response",
+							"pm.environment.set(\"console07_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt2}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Better PC\",\n    \"memory\": \"128 GB\",\n    \"storage\": \"4 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "get all user2 consoles 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt2}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "add console with invalid jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"401 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{invalid_jwt}}"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mid PC\",\n    \"memory\": \"64 GB\",\n    \"storage\": \"2 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "add console with missing jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"401 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(401);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mid PC\",\n    \"memory\": \"64 GB\",\n    \"storage\": \"2 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "get consoles with invalid jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"401 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{invalid_jwt}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "get consoles with missing jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"401 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{invalid_jwt}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "add game01 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set game id environment variable from response",
+							"pm.environment.set(\"game01_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"God of War: Ragnarok\",\n    \"type\": \"Open World\",\n    \"rating\": \"M\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "add game02 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set game id environment variable from response",
+							"pm.environment.set(\"game02_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Stardew Valley\",\n    \"type\": \"Farming Simulator\",\n    \"rating\": \"E\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "add game03 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set game id environment variable from response",
+							"pm.environment.set(\"game03_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Little Big Planet\",\n    \"type\": \"Platformer\",\n    \"rating\": \"E\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "add game04 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set game id environment variable from response",
+							"pm.environment.set(\"game04_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Runescape\",\n    \"type\": \"MMO RPG\",\n    \"rating\": \"T\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "add game05 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set game id environment variable from response",
+							"pm.environment.set(\"game05_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Sims 4\",\n    \"type\": \"Life Simulator\",\n    \"rating\": \"M\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "add game06 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Set game id environment variable from response",
+							"pm.environment.set(\"game06_id\", pm.response.json()[\"id\"]);",
+							"",
+							"pm.test(\"201 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "password",
+						"value": "Cheese1234!",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "boatguy@cheese.com",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Skyrim\",\n    \"type\": \"RPG\",\n    \"rating\": \"T\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "add game with html 406",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"406 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(406);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Civ 5\",\n    \"type\": \"Spreadsheet Game\",\n    \"rating\": \"T\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "get games with html 406",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"406 status code\", function () {",
+							"    //Check for 201 status code",
+							"    pm.response.to.have.status(406);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "get all games 200 (page 1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.environment.set(\"next_game_page\", pm.response.json()[\"next\"]);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "get all games 200 (page 2)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.environment.set(\"next_game_page\", pm.response.json()[\"next\"]);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{next_game_page}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit console01 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PlayStation 5\",\n    \"memory\": \"32 GB\",\n    \"storage\": \"2 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{console01_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit console with html 406",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 406\", function () {",
+							"    pm.response.to.have.status(406);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PlayStation 5\",\n    \"memory\": \"32 GB\",\n    \"storage\": \"2 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{console01_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit console with invalid console_id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PlayStation 4\",\n    \"memory\": \"16 GB\",\n    \"storage\": \"2 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{invalid_console_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit console with invalid/missing jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PlayStation 4\",\n    \"memory\": \"32 GB\",\n    \"storage\": \"2 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{console02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit user1 console with user2 jwt 403",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {",
+							"    pm.response.to.have.status(403);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt2}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PlayStation 4\",\n    \"memory\": \"32 GB\",\n    \"storage\": \"2 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{console02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit all user1 consoles 405",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt2}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"storage\": \"500 GB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/"
+			},
+			"response": []
+		},
+		{
+			"name": "edit game01 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"God of War\",\n    \"type\": \"Open World RPG\",\n    \"rating\": \"T\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games/{{game01_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit game with html 406",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 406\", function () {",
+							"    pm.response.to.have.status(406);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"God of War: Dad of Boy\",\n    \"type\": \"Hack and Slash\",\n    \"rating\": \"M\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games/{{game01_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit game with invalid game_id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PlayStation 4\",\n    \"memory\": \"16 GB\",\n    \"storage\": \"2 TB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games/{{invalid_game_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit all games 405",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"Open World RPG\",\n    \"rating\": \"T\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial console02 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Nintendo Switch Lite\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{console02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial console with html 406",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 406\", function () {",
+							"    pm.response.to.have.status(406);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Nintendo DS\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{console02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial console with invalid console_id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Xbox 360\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{invalid_console_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial console with invalid jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{invalid_jwt}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"storage\": \"500 GB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{console02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial console with missing jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"storage\": \"500 GB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{console02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial user1 console with user2 jwt 403",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {",
+							"    pm.response.to.have.status(403);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt2}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"storage\": \"500 GB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles/{{console02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial all user1 consoles 405",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt2}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"storage\": \"500 GB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial game02 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"Adventure\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games/{{game02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial game with html 406",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 406\", function () {",
+							"    pm.response.to.have.status(406);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"God of War\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games/{{game02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial game with invalid game_id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"Open World RPG\",\n    \"rating\": \"T\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games/{{invalid_game_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "edit partial all games 405",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"Open World RPG\",\n    \"rating\": \"T\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "assign game01 to console01 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{game01_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "assign game02 to console01 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{game02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "assign invalid game_id to console 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{invalid_game_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "assign game to invalid console_id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{invalid_console_id}}/games/{{game03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "assign game to console with invalid jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{invalid_jwt}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{game03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "assign game to console with missing jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{game03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "assign game to user1 console with user2 jwt 403",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {",
+							"    pm.response.to.have.status(403);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt2}}"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{game03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "get updated console01 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "get all updated games 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "remove game01 from console01 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{game01_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "remove invalid game_id from console 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{invalid_game_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "remove game from invalid console_id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{invalid_console_id}}/games/{{game03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "remove game from console with invalid jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{invalid_jwt}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{game02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "remove game from console with missing jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{game02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "remove game from user1 console with user2 jwt 403",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {",
+							"    pm.response.to.have.status(403);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt2}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{game02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "remove game not in console 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}/games/{{game03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "get all updated user1 consoles 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{ass_url}}/consoles"
+			},
+			"response": []
+		},
+		{
+			"name": "get all updated games 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ass_url}}/games"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user1 console01 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console01_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user1 console with invalid jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{invalid_jwt}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user1 console with missing jwt 401",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {",
+							"    pm.response.to.have.status(401);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user1 console with invalid console_id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{invalid_console_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user1 console with user2 jwt 403",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 403\", function () {",
+							"    pm.response.to.have.status(403);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt2}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete game01 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/games/{{game01_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete game with invalid game_id 404",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/games/{{invalid_game_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete game02 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/games/{{game02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete game03 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/games/{{game03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete game04 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/games/{{game04_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete game05 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/games/{{game05_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete game06 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/games/{{game06_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user1 console02 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console02_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user1 console03 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console03_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user1 console04 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console04_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user1 console05 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console05_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user1 console06 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt1}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console06_id}}"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user2 console07 204",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{jwt2}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ass_url}}/consoles/{{console07_id}}"
+			},
+			"response": []
+		}
+	]
+}
